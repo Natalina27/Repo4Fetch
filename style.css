@@ -11,8 +11,6 @@ body {
 
 .card {
     padding-top: 30px;
-}
-.card {
     margin: auto;
     width: 400px;
     text-align: left;
@@ -48,7 +46,7 @@ body {
     z-index: 1001;
   }
   
-  .preloader__row {
+.preloader__row {
     position: relative;
     top: 50%;
     left: 50%;
@@ -60,7 +58,7 @@ body {
     animation: preloader-rotate 2s infinite linear;
   }
   
-  .preloader__item {
+.preloader__item {
     position: absolute;
     display: inline-block;
     top: 0;
@@ -71,19 +69,19 @@ body {
     animation: preloader-bounce 2s infinite ease-in-out;
   }
   
-  .preloader__item:last-child {
+.preloader__item:last-child {
     top: auto;
     bottom: 0;
     animation-delay: -1s;
   }
   
-  @keyframes preloader-rotate {
+@keyframes preloader-rotate {
     100% {
       transform: rotate(360deg);
     }
   }
   
-  @keyframes preloader-bounce {
+@keyframes preloader-bounce {
   
     0%,
     100% {
@@ -95,11 +93,26 @@ body {
     }
   }
   
-  .loaded_hiding .preloader {
+.loaded_hiding .preloader {
     transition: 0.3s opacity;
     opacity: 0;
   }
   
-  .loaded .preloader {
+.hidden  {
     display: none;
   }
+.form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.form-group{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px;
+    height: 150px;
+    width: 200px;
+}
+

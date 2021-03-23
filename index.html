@@ -6,21 +6,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="preloader hidden">
+    <div class="preloader__row">
+        <div class="preloader__item"></div>
+        <div class="preloader__item"></div>
+    </div>
+</div>
 
-    <div class="preloader">
-        <div class="preloader__row">
-          <div class="preloader__item"></div>
-          <div class="preloader__item"></div>
-        </div>
-      </div>
-
-<div class="card">
+<form id="form"  class="form">
+    <div class="form-group">
+        <label for="usernameInput">Enter your username:</label>
+        <input class="form-control" id="usernameInput" type="text" name="username" value="" placeholder="Enter username...">
+        <input type="submit" class="btn" value="Submit" />
+    </div>
+</form>
+<div class="card hidden">
     <div class="user__card">
-      <input id="input" type="text">
-       <div class="user__photo"></div>
-       <div class="user__nickname">User Name:</div>
-       <div class="user__description">User Bio:</div>
-       <div class="date">Date:</div>
+        <div class="user__photo"></div>
+        <div class="user__nickname">User Name:</div>
+        <div class="user__description">User Bio:</div>
+        <div class="date">Date:</div>
     </div>
 </div>
 
