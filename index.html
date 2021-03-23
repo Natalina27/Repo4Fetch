@@ -6,24 +6,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="container">
-        <div class="circle circle-1"></div>
-        <div class="circle circle-2"></div>
-        <div class="circle circle-3"></div>
-        <div class="circle circle-4"></div>
-        <div class="circle circle-5"></div>
-      </div>
-
-<div class="card">
-    <div class="user__card">
-       <div class="user__photo"></div>
-       <div class="user__nickname">User Name:</div>
-       <div class="user__description">User Bio:</div>
-
+<div class="preloader hidden">
+    <div class="preloader__row">
+        <div class="preloader__item"></div>
+        <div class="preloader__item"></div>
     </div>
 </div>
 
+<form id="form"  class="form">
+    <div class="form-group">
+        <label for="usernameInput">Enter your username:</label>
+        <input class="form-control" id="usernameInput" type="text" name="username" value="" placeholder="Enter username...">
+        <input type="submit" class="btn" value="Submit" />
+    </div>
+</form>
+<div class="card hidden">
+    <div class="user__card">
+        <div class="user__photo"></div>
+        <div class="user__nickname">User Name:</div>
+        <div class="user__description">User Bio:</div>
+        <div class="date">Date:</div>
+    </div>
+</div>
 
 <script src="app.js"></script>
 </body>
