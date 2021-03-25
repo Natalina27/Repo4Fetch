@@ -72,7 +72,7 @@ form.onsubmit = (event) => {
 
     Promise.all([getResponse(), getDate()])
         .then(([response, date]) => {
-            setTimeout(stopPreloader, 2000);
+            stopPreloader();
             dateDiv.append(date);
             getUserData(response);
         })
