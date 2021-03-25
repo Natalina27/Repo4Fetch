@@ -6,8 +6,9 @@ const dateDiv = document.querySelector('.date');
 const url = 'https://api.github.com/users/';
 const preloader = document.querySelector('.preloader');
 const form = document.getElementById('form');
-const usernameInput = document.getElementById("usernameInput");
+const usernameInput = document.getElementById('usernameInput');
 let usernameInputValue = usernameInput.value;
+console.log('usernameInputValue###', typeof usernameInputValue);
 let nickName = usernameInputValue;
 
 const startPreloader = () => preloader.classList.remove('hidden');
@@ -16,10 +17,13 @@ const closeInputForm = () => {
     cardDiv.classList.remove('hidden');
     form.classList.remove('form');
     form.classList.add('hidden');
-}
+};
 const delay = ms => new Promise((resolve) => setTimeout(() => resolve(), ms));
 
 usernameInput.onchange = (event) => {
+    console.log('event', event);
+    console.log('event target', event.target);
+    console.log('event target value', event.target.value);
     usernameInputValue = event.target.value;
     nickName = usernameInputValue;
 }
@@ -38,6 +42,7 @@ async function getResponse() {
 }
 
 async function getDate() {
+    console.log('arguments', arguments);
     await delay(4000);
     return new Date();
 }
